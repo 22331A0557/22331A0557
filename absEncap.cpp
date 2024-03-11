@@ -1,41 +1,39 @@
 #include<iostream>
 using namespace std;
-class accesSpecifierDemo{
-    private:
-    int priVar;
 
-    protected:
-    int proVar;
+class AccessSpecifierDemo{
 
-    public:
-    int pubVar;
+   private :
+       int priVar;
+   protected :
+       int proVar;
+   public :
+       int pubVar;
+   public :
+       void setVar(int priValue,int proValue, int pubValue)
+       {
+           this->priVar = priValue;
+           this->proVar = proValue;
+           this->pubVar = pubValue;
+       }
+       void getVar(){
+           cout << "Private variable: " << priVar << endl;
+           cout << "Protected variable: " << proVar << endl;
+           cout << "Public variable: " << pubVar << endl;
+       }
 
-    void setVar(int priValue,int proValue,int pubValue)
-    {
-        priVar=priValue;
-        proVar=proValue;
-        pubVar=pubValue;
-    }
-
-    int getpriVar()
-    {
-        return priVar;
-    }
-    int getproVar()
-    {
-        return proVar;
-    }
-    int getpubVar()
-    {
-        return pubVar;
-    }
 };
-
 int main()
 {
-    accesSpecifierDemo obj;
-    obj.setVar(10,20,30);
-    cout<< "priVar : "<< obj.getpriVar() << endl;
-    cout<< "proVar : "<< obj.getproVar() << endl;
-    cout<< "pubVar : "<< obj.getpubVar() << endl;
+   AccessSpecifierDemo obj;
+   int a,b,c;
+   cout << "Enter the value of private variable :";
+   cin >> a;
+   cout << "Enter the value of protected variable :";
+   cin >> b;
+   cout << "Enter the value of public variable :";
+   cin >> c;
+   obj.setVar(a,b,c);
+   obj.getVar();
+
 }
