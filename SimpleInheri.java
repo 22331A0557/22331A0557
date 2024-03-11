@@ -1,39 +1,40 @@
 import java.util.Scanner;
+
 class Vehicle {
     Scanner x = new Scanner(System.in);
-    private
-    int year;
+    private int year;
     String brand;
-    public
-    void set_p(){
+
+    public void set_p() {
         System.out.print("brand name : ");
-        brand=x.nextLine();
+        brand = x.nextLine();
         System.out.print("manufacturing year : ");
-        year=x.nextInt();
+        year = x.nextInt();
     }
-    void displayP(){
+
+    void displayP() {
         System.out.println("vehicle details");
-        System.out.println("brand name of vehicle is : "+brand);
-        System.out.println("manufactoring year : "+year);
+        System.out.println("brand name of vehicle is : " + brand);
+        System.out.println("manufactoring year : " + year);
     }
 }
 
-class Car extends Vehicle{
-    private
-    int seat;
-    public
-    void set_c(){
+class Car extends Vehicle {
+    private int seat;
+
+    public void set_c() {
         set_p();
         System.out.print("no of seats : ");
-        seat=x.nextInt();
+        seat = x.nextInt();
     }
-    void displayC(){
+
+    void displayC() {
         displayP();
-        System.out.println("no of seats : "+seat);
+        System.out.println("no of seats : " + seat);
     }
 }
 
-public class SimpleInherit{
+public class SimpleInheri {
     public static void main(String[] args) {
         Car car1 = new Car();
         car1.set_c();
