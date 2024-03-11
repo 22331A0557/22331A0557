@@ -1,19 +1,25 @@
-#include<iostream>
-#include<string>
-using namespace std;
-int main(){
-    int a;
-    cout<<"Enter a positive integer : ";
-    cin>>a;
-    int n = a % 2;
-    switch(n){
-        case 0:
-        cout << "Number is Even.\n";
-        break;
+#include <iostream>
 
-        case 1:
-        cout << "Number is Odd.\n";
-        break;
-    }
-    return 0;
+using namespace std;
+
+void evenodd(int n)
+{
+   if(n%2==0)
+   {
+       cout << n << " is a even number" << endl; 
+   }
+   else
+   {
+       cout << n << " is a odd number" << endl; 
+   }
+}
+
+int main() {
+   int number;
+   cout << "Enter an integer : " ;
+   cin >> number;
+   evenodd(number);
+
+
+   return 0;
 }
